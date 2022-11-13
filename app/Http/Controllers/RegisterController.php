@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class RegisterController extends Controller
 {
     public function index(){
-        $users = User::all();
+        $users = User::paginate(5);
         return view('users.index', compact('users'));
     }
 
@@ -27,9 +27,10 @@ class RegisterController extends Controller
             'direccion' => 'required',
             'email' => 'required|email',
             'password' => 'required|confirmed',
+            'state',
         ]);
 
-        $user = User::create(request(['name', 'last_names', 'username', 'numero_documento', 'telefono', 'direccion', 'email', 'password']));
+        $user = User::create(request(['name', 'last_names', 'username', 'numero_documento', 'telefono', 'direccion', 'email', 'password', 'state']));
 
         auth()->login($user);
         return redirect()->to('/');

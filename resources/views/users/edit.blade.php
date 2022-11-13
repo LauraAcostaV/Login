@@ -40,13 +40,13 @@
                                     <select class="form-select">
                                         <option selected>Activo</option>
                                         <option value="1">Activo</option>
-                                        <option value="1">Inactivo</option>
+                                        <option value="2">Inactivo</option>
                                     </select>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <input type="password" placeholder="Ingrese la contraseña solo en caso de modificarla" id="password" name="password" class="form-control">
                                 </div>
-                                <div class="d-grid gap-2 col-3 mx-auto">
+                                <div class="d-grid gap-2 mx-auto">
                                     <button class="btn btn-success" type="submit">Actualizar</button>
                                 </div>
                             </div>
